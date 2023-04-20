@@ -1,0 +1,71 @@
+<ion-content>
+  <div
+    style="
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    "
+  >
+    <div
+      style="
+        width: 400px;
+        padding: 16px;
+        box-shadow: rgba(137, 43, 226, 0.359) 0px 2px 8px 0px;
+        border-radius: 16px;
+      "
+    >
+      <ion-text style="text-align: center; color: rgb(138, 43, 226)">
+        <h1>Register</h1>
+      </ion-text>
+      <form #myForm="ngForm" (ngSubmit)="onSubmit(myForm)">
+        <ion-input
+          style="margin-top: 16px"
+          label="Username"
+          type="text"
+          name="username"
+          [(ngModel)]="formData.username"
+          shape="round"
+          label-placement="floating"
+          fill="outline"
+          placeholder="Enter username"
+        ></ion-input>
+        <ion-input
+          style="margin-top: 16px"
+          label="Email"
+          type="email"
+          name="email"
+          [(ngModel)]="formData.email"
+          shape="round"
+          label-placement="floating"
+          fill="outline"
+          placeholder="Enter email"
+        ></ion-input>
+        <ion-input
+          style="margin-top: 16px"
+          label="Password"
+          type="password"
+          name="password"
+          [(ngModel)]="formData.password"
+          shape="round"
+          label-placement="floating"
+          fill="outline"
+          placeholder="Enter password"
+        ></ion-input>
+        <ion-button
+          style="
+            margin: 16px 0;
+            width: 100%;
+            color: blueviolet;
+            font-size: medium;
+          "
+          color="tertiary"
+          shape="round"
+          size="large"
+          type="submit"
+          >Submit</ion-button
+        >
+      </form>
+    </div>
+  </div>
+</ion-content>
