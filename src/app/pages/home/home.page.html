@@ -1,4 +1,26 @@
-<h1 style="margin-top: 50px">Hallo Ges ini home nya</h1>
 <ion-content>
-  <!-- <ion-router-outlet></ion-router-outlet> -->
+  <div style="margin-top: 64px">
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="6">
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr)">
+          <ion-card *ngFor="let menu of menus">
+            <img
+              alt="{{ menu.food_name }}"
+              src="{{ image.image_url }}"
+              *ngFor="let image of menu.Images"
+            />
+            <ion-card-header>
+              <ion-card-title style="font-weight: bold">
+                {{ menu.food_name }}
+              </ion-card-title>
+
+              <ion-card-subtitle>
+                Rp. {{ menu.price.toLocaleString() }}
+              </ion-card-subtitle>
+            </ion-card-header>
+          </ion-card>
+        </div>
+      </ion-col>
+    </ion-row>
+  </div>
 </ion-content>

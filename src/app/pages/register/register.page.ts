@@ -2,9 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, NgForm } from '@angular/forms';
 import { IonicModule, ToastController } from '@ionic/angular';
-import { ApiService } from 'src/app/api/api.service';
 import { HttpClient } from '@angular/common/http';
-// import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-register',

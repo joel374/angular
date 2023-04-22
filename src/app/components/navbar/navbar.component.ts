@@ -1,5 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
+import { Store } from '@ngrx/store';
+import {
+  selectAuthDisplayName,
+  selectAuthEmail,
+} from 'src/app/store/store.module';
 
 @Component({
   selector: 'app-navbar',
@@ -9,7 +14,10 @@ import { IonicModule } from '@ionic/angular';
   imports: [IonicModule],
 })
 export class NavbarComponent implements OnInit {
-  constructor() {}
-
-  ngOnInit() {}
+  constructor(private store: Store) {}
+  displayName: any = this.store.select(selectAuthDisplayName.toString);
+  ngOnInit() {
+    console.log(this.store.select(selectAuthDisplayName));
+    console.log(this.store.select(selectAuthEmail));
+  }
 }

@@ -50,11 +50,27 @@
           "
           color="tertiary"
           shape="round"
-          size="large"
           type="submit"
           >Submit</ion-button
         >
       </form>
+      <div style="border: 1px solid #0000ff"></div>
+      <ion-button
+        color="tertiary"
+        shape="round"
+        fill="outline"
+        style="
+          margin: 16px 0;
+          width: 100%;
+          color: blueviolet;
+          font-size: medium;
+        "
+        (click)="loginWithGoogle()"
+      >
+        <ion-icon name="logo-google" slot="end"></ion-icon>
+        Login with Google
+      </ion-button>
+      <!-- <button (click)="">login</button> -->
     </div>
   </div>
 </ion-content>

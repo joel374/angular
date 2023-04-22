@@ -3,7 +3,17 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebase: {
+    apiKey: 'AIzaSyD-7r-NXC3020G-JoMpeQ5NKjx29_yDAoU',
+    authDomain: 'convers-time.firebaseapp.com',
+    projectId: 'convers-time',
+    storageBucket: 'convers-time.appspot.com',
+    messagingSenderId: '470306178759',
+    appId: '1:470306178759:web:5ad773e5c08da84e8220e2',
+    measurementId: 'G-9QB3ZNH6X2',
+  },
+  apiBaseUrl: 'https://smoggy-pear-drill.cyclic.app',
 };
 
 /*
